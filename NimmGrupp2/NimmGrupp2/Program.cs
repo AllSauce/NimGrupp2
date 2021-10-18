@@ -67,7 +67,13 @@ namespace NimmGrupp2
 
     static class Drawer
     {
-
+        /// <summary>
+        /// Cointains logic for calcluating what to draw. Contacted to initilize drawing process
+        /// </summary>
+        /// <param name="board"></param>
+        /// <param name="aPlayer1Turn"></param>
+        /// <param name="player1"></param>
+        /// <param name="player2"></param>
         public static void DrawGameUI(int[] board, bool aPlayer1Turn, Player player1, Player player2)
         {
 
@@ -76,7 +82,10 @@ namespace NimmGrupp2
 
 
         }
-
+        /// <summary>
+        /// Draws A board from int[]      
+        /// </summary>
+        /// <param name="board"></param>
         public static void DrawBoard(int[] board)
         {
             NewLine();
