@@ -1,0 +1,13 @@
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.exe
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.deps.json
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.runtimeconfig.json
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.runtimeconfig.dev.json
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.dll
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.pdb
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.AssemblyInfoInputs.cache
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.AssemblyInfo.cs
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.csproj.CoreCompileInputs.cache
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.dll
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.pdb
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.genruntimeconfig.cache
+C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.csproj.AssemblyReference.cache
