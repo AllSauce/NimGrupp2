@@ -23,6 +23,38 @@ namespace NimmGrupp2
 
 
     }
+    
+    //Sets the logic for the game
+    public class GameLogic
+    {
+        //Sets board:
+        //Index represents the stack
+        //Number on index is the amount of sticks in respective stack
+        int[] board = {5, 5, 5};
+
+        public void RemoveSticks(Tuple<int, int> input)
+        {
+            //Chosen stack (-1 since it will be an index number)
+            int stack = input.Item1 -1;
+            //Chosen amount of sticks to remove
+            int amount = input.Item2;
+
+            //Replaces old value with new value
+            board[stack] = board[stack] - amount;
+        }
+
+        public void GameOver()
+        {
+            /*if(player1turn && board[0] == 0 && board[1] == 0 && board[2] == 0)
+            {
+                player2Score++:
+            }
+            else if(player2turn && board[0] == 0 && board[1] == 0 && board[2] == 0)
+            {
+                player1Score++;
+            }*/
+        }
+    }
 
     public abstract class Player
     {
