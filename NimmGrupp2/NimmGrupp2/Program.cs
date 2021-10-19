@@ -21,7 +21,6 @@ namespace NimmGrupp2
 
         }
 
-
     }
     
     //Sets the logic for the game
@@ -97,7 +96,7 @@ namespace NimmGrupp2
 
     }
 
-    static class Drawer
+    public static class Drawer
     {
         /// <summary>
         /// Cointains logic for calcluating what to draw. Contacted to initilize drawing process
@@ -109,9 +108,9 @@ namespace NimmGrupp2
         public static void DrawGameUI(int[] board, bool aPlayer1Turn, Player player1, Player player2)
         {
 
+            
 
-
-
+            DrawBoard(board);
 
         }
         /// <summary>
@@ -124,7 +123,6 @@ namespace NimmGrupp2
             DrawSolid();
             for (int i = 0; i <= 5; i++)
             {
-
 
                 if (board[0] != 0 || board[1] != 0 || board[2] != 0)
                 {
@@ -142,8 +140,6 @@ namespace NimmGrupp2
                         {
                             DrawBlank();
                         }
-
-
 
                     }
 
@@ -165,25 +161,18 @@ namespace NimmGrupp2
         {
             Console.Write("                    █");
         }
-
         private static void NewLine()
         {
             Console.WriteLine();
         }
-
         private static void DrawBar()
         {
             Console.WriteLine("█                    █                    █                    █");
         }
-
         private static void DrawSolid()
         {
             Console.WriteLine("████████████████████████████████████████████████████████████████");
         }
-
-
-
-
 
     }
 
