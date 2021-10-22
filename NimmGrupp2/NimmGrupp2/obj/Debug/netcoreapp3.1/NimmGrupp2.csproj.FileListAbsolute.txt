@@ -11,3 +11,17 @@ C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGr
 C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.pdb
 C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.genruntimeconfig.cache
 C:\Users\oscar\source\repos\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.csproj.AssemblyReference.cache
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.exe
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.deps.json
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.runtimeconfig.json
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.runtimeconfig.dev.json
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.dll
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\bin\Debug\netcoreapp3.1\NimmGrupp2.pdb
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.csproj.AssemblyReference.cache
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.AssemblyInfoInputs.cache
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.AssemblyInfo.cs
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.csproj.CoreCompileInputs.cache
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.dll
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.pdb
+C:\Users\Manxhuka\Documents\GitHub\NimGrupp2\NimmGrupp2\NimmGrupp2\obj\Debug\netcoreapp3.1\NimmGrupp2.genruntimeconfig.cache

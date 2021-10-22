@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oscar\\source\\repos\\NimmGrupp2\\NimmGrupp2\\NimmGrupp2.csproj": {}
+    "C:\\Users\\Manxhuka\\Documents\\GitHub\\NimGrupp2\\NimmGrupp2\\NimmGrupp2\\NimmGrupp2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oscar\\source\\repos\\NimmGrupp2\\NimmGrupp2\\NimmGrupp2.csproj": {
+    "C:\\Users\\Manxhuka\\Documents\\GitHub\\NimGrupp2\\NimmGrupp2\\NimmGrupp2\\NimmGrupp2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oscar\\source\\repos\\NimmGrupp2\\NimmGrupp2\\NimmGrupp2.csproj",
+        "projectUniqueName": "C:\\Users\\Manxhuka\\Documents\\GitHub\\NimGrupp2\\NimmGrupp2\\NimmGrupp2\\NimmGrupp2.csproj",
         "projectName": "NimmGrupp2",
-        "projectPath": "C:\\Users\\oscar\\source\\repos\\NimmGrupp2\\NimmGrupp2\\NimmGrupp2.csproj",
-        "packagesPath": "C:\\Users\\oscar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oscar\\source\\repos\\NimmGrupp2\\NimmGrupp2\\obj\\",
+        "projectPath": "C:\\Users\\Manxhuka\\Documents\\GitHub\\NimGrupp2\\NimmGrupp2\\NimmGrupp2\\NimmGrupp2.csproj",
+        "packagesPath": "C:\\Users\\Manxhuka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Manxhuka\\Documents\\GitHub\\NimGrupp2\\NimmGrupp2\\NimmGrupp2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\oscar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Manxhuka\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
