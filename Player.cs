@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace NimmGrupp2
 {
+    // Cointains logic and variables for players and AIs
     public abstract class Player
     {
         public int score = 0;
@@ -17,12 +18,10 @@ namespace NimmGrupp2
         public Human(string aname)
         {
             name = aname;
-
         }        
         //tillfällig metod
         public override Tuple<int, int> play(int[] board)
-        {
-            
+        {           
             bool x = true;
             int s1 = 0, s2 = 0;
             char[] splitChars = new[] { ',' };

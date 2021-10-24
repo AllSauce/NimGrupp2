@@ -7,12 +7,20 @@ namespace NimmGrupp2
         public Tuple<Player, Player>  firstOfAll()
         {
             Console.Clear();
-            Console.WriteLine("Welcome to a game of Nim!");
+            Console.WriteLine("Welcome to the game of Nim!");
+            Console.WriteLine("To see the rules type 'Rules' otherwise press enter.");
+            if (Console.ReadLine() == "Rules")
+            {
+                Console.Clear();
+                Console.ReadLine();
+            }
+            Console.Clear();
+            Console.WriteLine("Let's play!");            
             Console.WriteLine("What is your name?");
             Player player1 = new Human(Console.ReadLine());
             Console.Clear();
             Console.WriteLine("To play against another person type: 'Human'.");
-            Console.WriteLine("Otherwise there are 2 AI modes: 'Easy' and 'Hard'");
+            Console.WriteLine("Otherwise there are 2 AI modes: 'Easy' and 'Hard'.");
             Console.WriteLine("Now please type which mode you would like to play against.");            
             Player player2 = null;
 
