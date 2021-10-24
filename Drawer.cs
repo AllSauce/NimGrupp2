@@ -14,8 +14,8 @@ namespace NimmGrupp2
         /// <param name="message"></param>
         public static void DrawGameUI(int[] board, bool aPlayer1Turn, Player player1, Player player2, string message)
         {
-           Console.Clear();
-            Console.WriteLine("Score:");
+            Console.Clear();
+            
             Console.WriteLine(player1.name + " " + player1.score + " : " + player2.score + " " + player2.name);
             Console.WriteLine();
             if (message != null)

@@ -33,7 +33,7 @@ using System.Collections.Generic;
         {
             if(player1Turn && board[0] == 0 && board[1] == 0 && board[2] == 0)
             {
-                player2.score++;
+                player1.score++;
                 board[0] = 5;
                 board[1] = 5;
                 board[2] = 5;
@@ -41,7 +41,7 @@ using System.Collections.Generic;
             }
             else if(!player1Turn && board[0] == 0 && board[1] == 0 && board[2] == 0)
             {
-                player1.score++;
+                player2.score++;
                 board[0] = 5;
                 board[1] = 5;
                 board[2] = 5;
