@@ -33,10 +33,26 @@ namespace NimmGrupp2
             {
                 
                 Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, null);
-                Tuple<int, int> t1 = player1.play(gL.GetBoard());
+                bool y = true;
+                Tuple<int, int> t1 = Tuple.Create(0, 0);
+                while(y)
+                {
+                    try
+                    {
+                        t1 = player2.play(gL.GetBoard());
+                        break;
+                    }
+                    catch(UserInputException)
+                    {
+                         Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, "Please enter valid input!");               
+                    }
+
+                }
+                
                 gL.RemoveSticks(t1);
                 gL.GameOver(turn1, player1, player2);
                 turn1 = false;
+
             }
 
             
@@ -45,7 +61,21 @@ namespace NimmGrupp2
             {
                 
                 Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, null);
-                Tuple<int, int> t2 = player2.play(gL.GetBoard());
+                bool x = true;
+                Tuple<int, int> t2 = Tuple.Create(0, 0);
+                while (x)
+                {
+                    try 
+                    {
+                        t2 = player2.play(gL.GetBoard());
+                        break;
+                    }
+                    catch( UserInputException)
+                    {
+                        Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, "Please enter valid input!");
+                    }
+                }
+                
                 gL.RemoveSticks(t2);
                 gL.GameOver(turn1, player1, player2);
                 turn1 = true;

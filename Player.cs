@@ -54,15 +54,15 @@ namespace NimmGrupp2
                 s1--;
                 if (!test1 || !test2)
                 {
-                    Console.WriteLine("Please Eneter valid input!");
+                    throw new UserInputException();
                 }
                 else if (s1 > 2 || s1 < 0) 
                 { 
-                    Console.WriteLine("Please Eneter valid input!"); 
+                    throw new UserInputException();
                 }
                 else if (board[s1] < s2)
                 {
-                    Console.WriteLine("Please enter valid input!");
+                    throw new UserInputException();
                 }
                 else { x = false; }
 
