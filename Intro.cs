@@ -18,7 +18,7 @@ namespace NimmGrupp2
 
             if(data == "Human")
             {
-                Human hooman = new Human();
+                Human hooman = new Human("temp name");
                 return hooman;
             }
             else if(data == "Easy")

@@ -6,6 +6,7 @@ namespace NimmGrupp2
     public abstract class Player
     {
         public int score = 0;
+        public string name;
 
         public abstract Tuple<int, int> play(int[] board);
     }
@@ -13,6 +14,12 @@ namespace NimmGrupp2
     //Human class, for more players
     public class Human : Player
     {
+        public Human(string aname)
+        {
+            name = aname;
+
+        }
+        
         //tillfällig metod
         public override Tuple<int, int> play(int[] board)
         {

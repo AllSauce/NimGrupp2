@@ -10,7 +10,7 @@ namespace NimmGrupp2
         static void Main(string[] args)
         {
             Intro f = new Intro();
-            Human player1 = new Human();
+            Human player1 = new Human("Temp name");
             Running roon = new Running();
             bool x = true;
             Console.ForegroundColor = ConsoleColor.Green;
