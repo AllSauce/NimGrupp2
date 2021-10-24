@@ -9,20 +9,11 @@ namespace NimmGrupp2
         //Main method
         static void Main(string[] args)
         {
-            Intro f = new Intro();
-            
-            
+            Intro f = new Intro();                        
             Running roon = new Running();
             bool x = true;
-            Console.ForegroundColor = ConsoleColor.Green;
-            
-            
-            
-
-
+            Console.ForegroundColor = ConsoleColor.Green;                                  
             var players = f.firstOfAll();
-
-
             //Game loop  
             while (x)
             {

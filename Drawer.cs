@@ -43,33 +43,33 @@ namespace NimmGrupp2
             NewLine();
             DrawSolid();
             // Creates a new local temparray to disconnect from gamelogic.board
-            int[] tempArray = new int[3];
-            
+            int[] tempArray = new int[3];            
             Array.Copy(board, tempArray, 3);
+            // Loop for vertical animation movement
             for (int i = 0; i <= 5; i++)
             {
-
+                //Checks so that there are actually sticks to draw
                 if (tempArray[0] != 0 || tempArray[1] != 0 || tempArray[2] != 0)
                 {
+                    //Spacing
                     DrawBar();
+                    //End Block
                     Console.Write("█");
                     for (int x = 0; x < 3; x++)
                     {
+                        //Checks if space should have a stick or not
                         if (tempArray[x] > 0)
                         {
                             DrawStick();
+                            //Notes that stick has been drawn at stack
                             tempArray[x]--;
-
                         }
                         else
                         {
                             DrawBlank();
                         }
-
                     }
-
                     NewLine();
-
                 }
                 // makes sure it dosn't write solids too early and writes bars if no sticks are present
                 else if (i <= 4)
@@ -78,13 +78,10 @@ namespace NimmGrupp2
                     DrawBar();     
                 }
                 //writes a solid at the bottom
-                else { DrawBar(); DrawSolid();  }
-                
-            }
-
-            
+                else { DrawBar(); DrawSolid();  }                
+            }            
         }
-        
+        // Really these are understandable without comment        
         private static void DrawStick()
         {
             Console.Write(" ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  █");

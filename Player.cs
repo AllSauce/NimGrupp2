@@ -18,8 +18,7 @@ namespace NimmGrupp2
         {
             name = aname;
 
-        }
-        
+        }        
         //tillfällig metod
         public override Tuple<int, int> play(int[] board)
         {
@@ -32,9 +31,7 @@ namespace NimmGrupp2
             bool test1;
             bool test2;
             while (x)
-            {
-                
-                
+            {                                
                 playerInput = Console.ReadLine();
                 inputData = playerInput.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
 
@@ -49,8 +46,7 @@ namespace NimmGrupp2
                     test1 = false; test2 = false; 
                 }
                 
-                //Converts to indexposition
-                
+                //Converts to indexposition                
                 s1--;
                 if (!test1 || !test2)
                 {
@@ -65,7 +61,6 @@ namespace NimmGrupp2
                     throw new UserInputException();
                 }
                 else { x = false; }
-
             }
             var t1 = Tuple.Create(s1, s2);
             return t1;
@@ -94,8 +89,7 @@ namespace NimmGrupp2
             //slumpar antalet stickor som den ska ta
             int item2 = random.Next(1, board[item1]);
             var t1 = Tuple.Create(item1, item2);
-            return t1;
-           
+            return t1;           
         }
     }
 

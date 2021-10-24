@@ -8,16 +8,13 @@ using System.Collections.Generic;
         //Sets board:
         //Index represents the stack
         //Number at index is the amount of sticks in respective stack
-        private int[] board = {5, 5, 5};
-
-        
-        
-        
+        private int[] board = {5, 5, 5};    
+        // Getter for board                   
         public int[] GetBoard()
         {
            return board;
         }
-
+        // Removes sticks from board based on index and amount
         public void RemoveSticks(Tuple<int, int> input)
         {
                 //Chosen stack 
@@ -28,7 +25,7 @@ using System.Collections.Generic;
                 //Replaces old value with new value
                 board[stack] = board[stack] - amount;
         }
-
+        // checks if game is over and adds score
         public void GameOver(bool player1Turn, Player player1, Player player2)
         {
             if(player1Turn && board[0] == 0 && board[1] == 0 && board[2] == 0)
