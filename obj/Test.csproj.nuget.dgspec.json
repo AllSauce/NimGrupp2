@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Oscar\\Documents\\Test\\Test.csproj": {}
+    "C:\\Users\\Oscar\\Documents\\GitHub\\NimGrupp2\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Oscar\\Documents\\Test\\Test.csproj": {
+    "C:\\Users\\Oscar\\Documents\\GitHub\\NimGrupp2\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Oscar\\Documents\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\Oscar\\Documents\\GitHub\\NimGrupp2\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\Oscar\\Documents\\Test\\Test.csproj",
+        "projectPath": "C:\\Users\\Oscar\\Documents\\GitHub\\NimGrupp2\\Test.csproj",
         "packagesPath": "C:\\Users\\Oscar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Oscar\\Documents\\Test\\obj\\",
+        "outputPath": "C:\\Users\\Oscar\\Documents\\GitHub\\NimGrupp2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Oscar\\AppData\\Roaming\\NuGet\\NuGet.Config",
