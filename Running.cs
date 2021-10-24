@@ -25,7 +25,7 @@ namespace NimmGrupp2
                 {
                     try
                     {
-                        t1 = player2.play(gL.GetBoard());
+                        t1 = player1.play(gL.GetBoard());
                         break;
                     }
                     catch(UserInputException)
