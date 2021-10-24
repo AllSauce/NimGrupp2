@@ -105,9 +105,57 @@ namespace NimmGrupp2
         {
             name = "Harambe, we still remeber";
         }
+        
         public override Tuple<int, int> play(int[] board)
         {
-            throw new NotImplementedException();
+            string[] board2 = new string[] { "", "", "" };
+            int[] drag = new int[] { 0, 0, 0 };
+            int sum = 0;
+
+
+            for (int i = 0; i <= board.Length - 1; i++)
+            {
+                board2[i] = Convert.ToString(board[i], 2);
+                board[i] = Convert.ToInt32(board2[i]);
+            }
+
+            // 101 101 101
+            for (int j = 0; j <= board.Length - 1; j++)
+            {
+                sum += board[j];
+            }
+            // 303
+
+            char[] siffror = sum.ToString().ToCharArray();
+            // 3 0 3
+
+            if (siffror[0] % 2 != 0)
+            {
+                Console.WriteLine(siffror[0]);
+                drag[0] = 1;
+            }
+            if (siffror[1] % 2 != 0)
+            {
+                Console.WriteLine(siffror[1]);
+                drag[1] = 1;
+            }
+            if (siffror[2] % 2 != 0)
+            {
+                Console.WriteLine(siffror[2]);
+                drag[2] = 1;
+            }
+
+            String tempor = "";
+            foreach(int i in drag)
+            {
+                tempor += Convert.ToString(i);
+            }
+
+            int output = Convert.ToInt32(tempor, 2);
+
+            var tuppel = Tuple.Create(0, output);
+
+            return tuppel;
         }
     }
 }
