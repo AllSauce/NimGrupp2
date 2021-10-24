@@ -12,7 +12,8 @@ namespace NimmGrupp2
             Intro f = new Intro();                        
             Running roon = new Running();
             bool x = true;
-            Console.ForegroundColor = ConsoleColor.Green;                                  
+            Console.ForegroundColor = ConsoleColor.Green;
+            // Plays intro screen                                  
             var players = f.firstOfAll();
             //Game loop  
             while (x)

@@ -5,7 +5,7 @@ namespace NimmGrupp2
     public static class Drawer
     {
         /// <summary>
-        /// Cointains logic for calcluating what to draw. Contacted to initilize drawing process
+        /// Cointains logic for calcluating what to draw. Contacted to initilize drawing process. Cointains an optional message, enter null to leave emtpy
         /// </summary>
         /// <param name="board"></param>
         /// <param name="aPlayer1Turn"></param>

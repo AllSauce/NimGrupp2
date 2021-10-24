@@ -7,7 +7,7 @@ namespace NimmGrupp2
     {
         public int score = 0;
         public string name;
-
+        
         public abstract Tuple<int, int> play(int[] board);
     }
 
@@ -69,11 +69,16 @@ namespace NimmGrupp2
 
     public class EasyAI : Player
     {
+
+        public EasyAI()
+        {
+            name = "Greggie, eater of cupcakes";
+        }
         //tillfällig metod
         public override Tuple<int, int> play(int[] board)
         {
             
-            Random random = new Random();
+           Random random = new Random();
            
            List<int> list = new List<int>();
            //kollar efter tomma högar
@@ -96,6 +101,10 @@ namespace NimmGrupp2
     public class GamerModeAI : Player
     {
         //tillfällig metod
+        public GamerModeAI()
+        {
+            name = "Harambe, we still remeber";
+        }
         public override Tuple<int, int> play(int[] board)
         {
             throw new NotImplementedException();

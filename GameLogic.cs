@@ -32,7 +32,7 @@ using System.Collections.Generic;
             {
                 player1.score++;
                 //Draws Winning message
-                Drawer.DrawGameUI(board, player1Turn, player1, player2, player1.name +" Wins! Tap enter to play again!");
+                Drawer.DrawGameUI(board, player1Turn, player1, player2, player1.name +" Wins! Thanks for playing! Tap enter to play again!");
                 Console.ReadLine();
                 //Resets board
                 board[0] = 5;
@@ -44,7 +44,7 @@ using System.Collections.Generic;
             {
                 player2.score++;
                 //Draws winning message
-                Drawer.DrawGameUI(board, player1Turn, player1, player2, player2.name +" Wins! Tap enter to play again!");
+                Drawer.DrawGameUI(board, player1Turn, player1, player2, player2.name +" Wins! Thanks for playing! Tap enter to play again!");
                 Console.ReadLine();
                 //Resets Board
                 board[0] = 5;
