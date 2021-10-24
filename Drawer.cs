@@ -15,7 +15,23 @@ namespace NimmGrupp2
         public static void DrawGameUI(int[] board, bool aPlayer1Turn, Player player1, Player player2, string message)
         {
            Console.Clear();
-           DrawBoard(board);
+            Console.WriteLine("Score:");
+            Console.WriteLine(player1.name + " " + player1.score + " : " + player2.score + " " + player2.name);
+            Console.WriteLine();
+            if (message != null)
+            {
+                Console.WriteLine(message);
+                Console.WriteLine();
+            }
+            if (aPlayer1Turn)
+            {
+                Console.WriteLine("Your turn " + player1.name + "!");
+            }
+            else
+            {
+                Console.WriteLine("Your turn " + player2.name + "!");
+            }
+            DrawBoard(board);
 
         }
         /// <summary>
