@@ -5,44 +5,52 @@ namespace NimmGrupp2
     public class Intro
     {
         
-        public Player firstOfAll()
+        public Tuple<Player, Player>  firstOfAll()
         {
-            EasyAI ez = new EasyAI();
+            
 
             Console.WriteLine("Welcome to a game of Nim!");
+            Console.WriteLine("What is your name?");
+            Player player1 = new Human(Console.ReadLine());
             Console.WriteLine("To play against another person type: 'Human'.");
             Console.WriteLine("Otherwise there are 2 AI modes: 'Easy' and 'Hard'");
             Console.WriteLine("Now please type which mode you would like to play against.");
-
+            Player player2 = null;
 
             while (true)
             {
                 string data = Console.ReadLine();
 
-                if (data != "Human"  || data != "Easy"  || data != "Hard")
+                if (data != "Human"  && data != "Easy"  && data != "Hard")
                 {
                     Console.WriteLine("Please type: 'Human', 'Easy' or 'Hard'.");
+                    
                 }
                 else if (data == "Human")
                 {
                     Console.WriteLine("Human, tell me your name!");
-                    Human hooman = new Human(Console.ReadLine());
-                    return hooman;
+                    player2 = new Human(Console.ReadLine());
+                    break;
+                    
                 }
                 else if (data == "Easy")
                 {
-                    return ez;
+                    player2 = new EasyAI();
+                    break;
                 }
                 else if (data == "Hard")
                 {
-                    GamerModeAI gg = new GamerModeAI();
-                    return gg;
+
+                    player2 = new GamerModeAI();
+                    break;
+                    
                 }
                 
-                else { break; }
+                
             }
-
-            return ez;
+            
+            var t1 = Tuple.Create(player1, player2);
+            return t1;
         }
     }
 }

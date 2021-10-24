@@ -32,7 +32,7 @@ namespace NimmGrupp2
             while(turn1)
             {
                 
-                Drawer.DrawBoard(gL.GetBoard());
+                Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, null);
                 Tuple<int, int> t1 = player1.play(gL.GetBoard());
                 gL.RemoveSticks(t1);
                 gL.GameOver(turn1, player1, player2);
@@ -44,7 +44,7 @@ namespace NimmGrupp2
             while (turn1 == false)
             {
                 
-                Drawer.DrawBoard(gL.GetBoard());
+                Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, null);
                 Tuple<int, int> t2 = player2.play(gL.GetBoard());
                 gL.RemoveSticks(t2);
                 gL.GameOver(turn1, player1, player2);

@@ -10,7 +10,8 @@ namespace NimmGrupp2
         static void Main(string[] args)
         {
             Intro f = new Intro();
-            Human player1 = new Human("Temp name");
+            
+            
             Running roon = new Running();
             bool x = true;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -19,12 +20,13 @@ namespace NimmGrupp2
             
 
 
-            Player player2 = f.firstOfAll();
+            var players = f.firstOfAll();
+
 
             //Game loop  
             while (x)
             {
-                roon.RunningFunc(player1, player2);
+                roon.RunningFunc(players.Item1, players.Item2);
             }
         }
     }
