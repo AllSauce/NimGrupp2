@@ -6,7 +6,7 @@ namespace NimmGrupp2
     {        
         public Tuple<Player, Player>  firstOfAll()
         {
-            
+            Console.Clear();
             Console.WriteLine("Welcome to a game of Nim!");
             Console.WriteLine("What is your name?");
             Player player1 = new Human(Console.ReadLine());

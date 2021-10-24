@@ -25,12 +25,16 @@ using System.Collections.Generic;
                 //Replaces old value with new value
                 board[stack] = board[stack] - amount;
         }
-        // checks if game is over and adds score
+        // checks if game is over and adds score. Doesn't reset whose turn it is so that losing player starts next game
         public void GameOver(bool player1Turn, Player player1, Player player2)
         {
             if(player1Turn && board[0] == 0 && board[1] == 0 && board[2] == 0)
             {
                 player1.score++;
+                //Draws Winning message
+                Drawer.DrawGameUI(board, player1Turn, player1, player2, player1.name +" Wins! Tap enter to play again!");
+                Console.ReadLine();
+                //Resets board
                 board[0] = 5;
                 board[1] = 5;
                 board[2] = 5;
@@ -39,6 +43,10 @@ using System.Collections.Generic;
             else if(!player1Turn && board[0] == 0 && board[1] == 0 && board[2] == 0)
             {
                 player2.score++;
+                //Draws winning message
+                Drawer.DrawGameUI(board, player1Turn, player1, player2, player2.name +" Wins! Tap enter to play again!");
+                Console.ReadLine();
+                //Resets Board
                 board[0] = 5;
                 board[1] = 5;
                 board[2] = 5;

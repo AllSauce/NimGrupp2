@@ -21,7 +21,7 @@ namespace NimmGrupp2
             }
         }
     }
-    
+    // Exception to handle user input error in Human.play method
     public class UserInputException : System.Exception
     {
         public UserInputException() { }
