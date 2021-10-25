@@ -109,7 +109,7 @@ namespace NimmGrupp2
             name = "Harambe, we still remeber";
         }
 
-        private int choose_stack(int[] board)
+        /*private int choose_stack(int[] board)
         {
             int temp = 0;
             int index = 0;
@@ -123,68 +123,109 @@ namespace NimmGrupp2
                 }
             }
             return index;
+        }*/
+
+        static bool PerfektBoard(int[] x, int y, int z)
+        {
+            int[] tempArr = new int[3];
+            Array.Copy(tempArr, x, 3);
+                
+            int summan = 0;
+            string[] boarden2 = new string[] { "", "", "" };
+
+            for (int i = 0; i <= tempArr.Length - 1; i++)
+            {
+                boarden2[i] = Convert.ToString(tempArr[i], 2);
+                tempArr[i] = Convert.ToInt32(boarden2[i]);
+                summan += tempArr[i];
+            }
+
+            char[] siffror = summan.ToString().ToCharArray();
+
+            for(int i = 0; i < siffror.Length; i++)
+            {
+                if(siffror[i] % 2 != 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
         
         public override Tuple<int, int> play(int[] board)
         {
+            //Instantiate
+            int[] tempArr = new int[3];
+            Array.Copy(tempArr, board, 3);
             string[] board2 = new string[] { "", "", "" };
             int[] drag = new int[] { 0, 0, 0 };
             int sum = 0;
+            int stack = 0;
 
             //Converts to binary string
-            for (int i = 0; i <= board.Length - 1; i++)
+            for (int i = 0; i <= tempArr.Length - 1; i++)
             {
-                board2[i] = Convert.ToString(board[i], 2);
-                board[i] = Convert.ToInt32(board2[i]);
+                board2[i] = Convert.ToString(tempArr[i], 2);
+                tempArr[i] = Convert.ToInt32(board2[i]);
             }
 
+            // 303
             //Sum of binary numbers 101 101 101
             for (int j = 0; j <= board.Length - 1; j++)
             {
-                sum += board[j];
+                sum += tempArr[j];
             }
-            // 303
 
             //Splits the integer
             char[] siffror = sum.ToString().ToCharArray();
             // 3 0 3
-
-            bool poop = false;
+            
             //Checks if even
-            if (siffror[0] % 2 != 0)
+            bool work = false;
+            for(int i = 0; i < siffror.Length; i++)
             {
-                drag[0] = 1;
-                poop = true;
+                if(siffror[i] % 2 != 0)
+                {
+                    drag[i] = 1;
+                    work = true;
+                }
             }
-            if (siffror[1] % 2 != 0)
+
+            //Converts it back to be usable
+            int output = convBack(drag);
+
+            //Choose correct stack
+            for(int i = 0; i < 3; i++)
             {
-                drag[1] = 1;
-                poop = true;
+                if(PerfektBoard(tempArr, output, i))
+                {
+                    stack = i + 1;
+                }
             }
-            if (siffror[2] % 2 != 0)
-            {
-                drag[2] = 1;
-                poop = true;
-            }
-            //If the board is even then go with random values
-            else if(poop == false)
+
+            var tuppel = Tuple.Create(stack, output);
+
+            if(work == false)
             {
                 return tempEz.play(board);
             }
+        
+            return tuppel;
 
-            //Converts back
+        }
+
+        private int convBack(int[] x)
+        {
             String tempor = "";
-            foreach(int i in drag)
+            foreach(int i in x)
             {
                 tempor += Convert.ToString(i);
             }
 
-            int output = Convert.ToInt32(tempor, 2);
-            int stacker = choose_stack(board);
+            int temp = Convert.ToInt32(tempor, 2);
 
-            var tuppel = Tuple.Create(stacker, output);
-
-            return tuppel;
+            return temp;
         }
     }
 }
