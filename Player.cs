@@ -101,10 +101,28 @@ namespace NimmGrupp2
 
     public class GamerModeAI : Player
     {
+        EasyAI tempEz = new EasyAI();
+        
         //tillfällig metod
         public GamerModeAI()
         {
             name = "Harambe, we still remeber";
+        }
+
+        private int choose_stack(int[] board)
+        {
+            int temp = 0;
+            int index = 0;
+
+            for(int i = 0; i < board.Length; i++)
+            {
+                if(temp < board[i])
+                {
+                    temp = board[i];
+                    index = i;
+                }
+            }
+            return index;
         }
         
         public override Tuple<int, int> play(int[] board)
@@ -113,39 +131,48 @@ namespace NimmGrupp2
             int[] drag = new int[] { 0, 0, 0 };
             int sum = 0;
 
-
+            //Converts to binary string
             for (int i = 0; i <= board.Length - 1; i++)
             {
                 board2[i] = Convert.ToString(board[i], 2);
                 board[i] = Convert.ToInt32(board2[i]);
             }
 
-            // 101 101 101
+            //Sum of binary numbers 101 101 101
             for (int j = 0; j <= board.Length - 1; j++)
             {
                 sum += board[j];
             }
             // 303
 
+            //Splits the integer
             char[] siffror = sum.ToString().ToCharArray();
             // 3 0 3
 
+            bool poop = false;
+            //Checks if even
             if (siffror[0] % 2 != 0)
             {
-                Console.WriteLine(siffror[0]);
                 drag[0] = 1;
+                poop = true;
             }
             if (siffror[1] % 2 != 0)
             {
-                Console.WriteLine(siffror[1]);
                 drag[1] = 1;
+                poop = true;
             }
             if (siffror[2] % 2 != 0)
             {
-                Console.WriteLine(siffror[2]);
                 drag[2] = 1;
+                poop = true;
+            }
+            //If the board is even then go with random values
+            else if(poop == false)
+            {
+                return tempEz.play(board);
             }
 
+            //Converts back
             String tempor = "";
             foreach(int i in drag)
             {
@@ -153,8 +180,9 @@ namespace NimmGrupp2
             }
 
             int output = Convert.ToInt32(tempor, 2);
+            int stacker = choose_stack(board);
 
-            var tuppel = Tuple.Create(0, output);
+            var tuppel = Tuple.Create(stacker, output);
 
             return tuppel;
         }
