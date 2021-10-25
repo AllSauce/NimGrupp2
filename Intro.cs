@@ -9,9 +9,19 @@ namespace NimmGrupp2
             Console.Clear();
             Console.WriteLine("Welcome to the game of Nim!");
             Console.WriteLine("To see the rules type 'Rules' otherwise press enter.");
+            
+            //Displays the rules if requested
             if (Console.ReadLine() == "Rules")
             {
                 Console.Clear();
+                Console.WriteLine("Two players take turns taking 1-5 sticks from one of the stacks on the board.");
+                Console.WriteLine();
+                Console.WriteLine("Whoever picks the last stick wins! The board looks like this:");
+                Console.WriteLine();
+                int[] temparray = {5, 5, 5};
+                Drawer.DrawBoard(temparray);
+                Console.WriteLine();
+                Console.WriteLine("Press enter to continue!");
                 Console.ReadLine();
             }
             Console.Clear();
@@ -30,15 +40,13 @@ namespace NimmGrupp2
                 Console.Clear();
                 if (data != "Human"  && data != "Easy"  && data != "Hard")
                 {
-                    Console.WriteLine("Please type: 'Human', 'Easy' or 'Hard'.");
-                    
+                    Console.WriteLine("Please type: 'Human', 'Easy' or 'Hard'.");                    
                 }
                 else if (data == "Human")
                 {                    
                     Console.WriteLine("Human, tell me your name!");
                     player2 = new Human(Console.ReadLine());
-                    break;
-                    
+                    break;                    
                 }
                 else if (data == "Easy")
                 {
@@ -51,8 +59,7 @@ namespace NimmGrupp2
                     break;                    
                 }                            
             }            
-            var t1 = Tuple.Create(player1, player2);
-            return t1;
+            return Tuple.Create(player1, player2);
         }
     }
 }
