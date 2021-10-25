@@ -73,7 +73,8 @@ namespace NimmGrupp2
         {
             name = "Greggie, eater of cupcakes";
         }
-        //tillfällig metod
+        
+        //Easy AI spelningsmetod
         public override Tuple<int, int> play(int[] board)
         {
             
@@ -85,6 +86,7 @@ namespace NimmGrupp2
            {
                if (board[i] != 0)
                {
+                   // Lista med indexnummer som inte är tomma
                   list.Add(i); 
                }
            }

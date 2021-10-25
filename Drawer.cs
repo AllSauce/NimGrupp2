@@ -84,11 +84,11 @@ namespace NimmGrupp2
         // Really these are understandable without comment        
         private static void DrawStick()
         {
-            Console.Write(" ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  █");
+            Console.Write("  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  █");
         }
         private static void DrawBlank()
         {
-            Console.Write("                    █");
+            Console.Write("                     █");
         }
         private static void NewLine()
         {
@@ -96,11 +96,11 @@ namespace NimmGrupp2
         }
         private static void DrawBar()
         {
-            Console.WriteLine("█                    █                    █                    █");
+            Console.WriteLine("█                     █                     █                     █");
         }
         private static void DrawSolid()
         {
-            Console.WriteLine("████████████████████████████████████████████████████████████████");
+            Console.WriteLine("███████████████████████████████████████████████████████████████████");
         }
         
 
