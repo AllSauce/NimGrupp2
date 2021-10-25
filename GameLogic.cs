@@ -32,7 +32,7 @@ using System.Collections.Generic;
             {
                 player1.score++;
                 //Draws Winning message
-                Drawer.DrawGameUI(board, player1Turn, player1, player2, player1.name +" Wins! Thanks for playing! Tap enter to play again! Type 'Quit' or 'Exit' to exit!");
+                Drawer.DrawGameUI(board, player1Turn, player1, player2, player1.name +" Wins! Thanks for playing! Tap enter to play again or type 'Exit'");
                 string temp = Console.ReadLine();
                 if (temp == "exit" || temp == "quit" || temp == "Exit" || temp == "Quit"){Environment.Exit(0);}
                 //Resets board
@@ -45,7 +45,7 @@ using System.Collections.Generic;
             {
                 player2.score++;
                 //Draws winning message
-                Drawer.DrawGameUI(board, player1Turn, player1, player2, player2.name +" Wins! Thanks for playing! Tap enter to play again!");
+                Drawer.DrawGameUI(board, player1Turn, player1, player2, player2.name +" Wins! Thanks for playing! Tap enter to play again or type 'Exit'");
                 string temp = Console.ReadLine();
                 if (temp == "exit" || temp == "quit" || temp == "Exit" || temp == "Quit"){Environment.Exit(0);}
                 //Resets Board
