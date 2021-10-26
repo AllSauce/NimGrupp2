@@ -202,6 +202,7 @@ namespace NimmGrupp2
                 //Nimsum is 0 when board is losing
                 if (GetNimSum(tempboard) == 0)
                 {
+                    //returns if suggested move results in a losing board for enemy
                     return move;
                 }
             }
