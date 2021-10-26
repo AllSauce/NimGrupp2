@@ -6,6 +6,10 @@ namespace NimmGrupp2
 {
     class Program
     {
+        //(Input format ska vara mellanslag istället för komma "1 2")
+
+        //Kunna exita närsom istället för efter rundan (maybe)
+
         //Main method
         static void Main(string[] args)
         {
