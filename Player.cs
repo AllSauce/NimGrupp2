@@ -33,8 +33,7 @@ namespace NimmGrupp2
             {                                
                 playerInput = Console.ReadLine();
                 inputData = playerInput.Split(splitChars, StringSplitOptions.RemoveEmptyEntries);
-
-                //Tuple to return
+                
                 try
                 {
                     test1 = Int32.TryParse(inputData[0], out s1);
@@ -47,6 +46,7 @@ namespace NimmGrupp2
                 
                 //Converts to indexposition                
                 s1--;
+                //Looks for any Userinput errors
                 if (!test1 || !test2)
                 {
                     throw new UserInputException();

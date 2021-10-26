@@ -15,6 +15,7 @@ namespace NimmGrupp2
         public static void DrawGameUI(int[] board, bool aPlayer1Turn, Player player1, Player player2, string message)
         {
             Console.Clear();
+            DrawLogo();
             
             Console.WriteLine(player1.name + " " + player1.score + " : " + player2.score + " " + player2.name);
             Console.WriteLine();
@@ -101,7 +102,29 @@ namespace NimmGrupp2
         {
             Console.WriteLine("███████████████████████████████████████████████████████████████████");
         }
-        
+        public static void DrawLogo()
+        {
+            Console.WriteLine(@" _   _  _____  __  __ ");
+            Console.WriteLine(@"| \ | ||_   _||  \/  |");
+            Console.WriteLine(@"|  \| |  | |  | \  / |");
+            Console.WriteLine(@"| . ` |  | |  | |\/| |");
+            Console.WriteLine(@"| |\  | _| |_ | |  | |");
+            Console.WriteLine(@"|_| \_||_____||_|  |_|");
+            Console.WriteLine();
+
+
+
+        }
+        public static void DrawWelcome()
+        {
+            Console.WriteLine(@"__          __    _                                 _            _   _  _____  __  __ ");
+            Console.WriteLine(@"\ \        / /   | |                               | |          | \ | ||_   _||  \/  |");
+            Console.WriteLine(@" \ \  /\  / /___ | |  ___  ___   _ __ ___    ___   | |_  ___    |  \| |  | |  | \  / |");
+            Console.WriteLine(@"  \ \/  \/ // _ \| | / __|/ _ \ | '_ ` _ \  / _ \  | __|/ _ \   | . ` |  | |  | |\/| |");
+            Console.WriteLine(@"   \  /\  /|  __/| || (__| (_) || | | | | ||  __/  | |_| (_) |  | |\  | _| |_ | |  | |");
+            Console.WriteLine(@"    \/  \/  \___||_| \___|\___/ |_| |_| |_| \___|   \__|\___/   |_| \_||_____||_|  |_|");
+            Console.WriteLine(@"");
+        }
 
     }
 }

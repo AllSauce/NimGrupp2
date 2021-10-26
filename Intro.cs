@@ -7,13 +7,15 @@ namespace NimmGrupp2
         public Tuple<Player, Player>  firstOfAll()
         {
             Console.Clear();
-            Console.WriteLine("Welcome to the game of Nim!");
+            Drawer.DrawWelcome();
+            Console.WriteLine();
             Console.WriteLine("To see the rules type 'Rules' otherwise press enter.");
             
             //Displays the rules if requested
             if (Console.ReadLine() == "Rules")
             {
                 Console.Clear();
+                Drawer.DrawLogo();
                 Console.WriteLine("Two players take turns taking 1-5 sticks from one of the stacks on the board.");
                 Console.WriteLine();
                 Console.WriteLine("Whoever picks the last stick wins! The board looks like this:");
@@ -25,10 +27,12 @@ namespace NimmGrupp2
                 Console.ReadLine();
             }
             Console.Clear();
+            Drawer.DrawLogo();
             Console.WriteLine("Let's play!");            
             Console.WriteLine("What is your name?");
             Player player1 = new Human(Console.ReadLine());
             Console.Clear();
+            Drawer.DrawLogo();
             Console.WriteLine("To play against another person type: 'Human'.");
             Console.WriteLine("Otherwise there are 2 AI modes: 'Easy' and 'Hard'.");
             Console.WriteLine("Now please type which mode you would like to play against.");            
@@ -40,10 +44,12 @@ namespace NimmGrupp2
                 Console.Clear();
                 if (data != "Human"  && data != "Easy"  && data != "Hard")
                 {
+                    Drawer.DrawLogo();
                     Console.WriteLine("Please type: 'Human', 'Easy' or 'Hard'.");                    
                 }
                 else if (data == "Human")
                 {                    
+                    Drawer.DrawLogo();
                     Console.WriteLine("Human, tell me your name!");
                     player2 = new Human(Console.ReadLine());
                     break;                    
