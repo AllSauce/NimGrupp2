@@ -71,7 +71,7 @@ namespace NimmGrupp2
 
         public EasyAI()
         {
-            name = "Greggie, eater of cupcakes";
+            name = "Greggie eater of cupcakes";
         }
         
         //Easy AI spelningsmetod
@@ -80,22 +80,15 @@ namespace NimmGrupp2
             
            Random random = new Random();
            
-           List<int> list = new List<int>();
-           //kollar efter tomma högar
-           for (int i = 0; i < board.Length; i++)
-           {
-               if (board[i] != 0)
-               {
-                   // Lista med indexnummer som inte är tomma
-                  list.Add(i); 
-               }
-           }
-           //slumpar en av högarna som inte är tom
-            int item1 = list[random.Next(0, list.Count - 1)];
-            //slumpar antalet stickor som den ska ta
-            int item2 = random.Next(1, board[item1]);
-            var t1 = Tuple.Create(item1, item2);
-            return t1;           
+           List<Tuple<int, int>> legalMoves = new List<Tuple<int, int>>();
+            for (int i = 0; i < 3; i++)
+            {
+                for(int x = 0; x < board[i]; x++)
+                {
+                    legalMoves.Add(Tuple.Create(i, x + 1));
+                }
+            }
+            return legalMoves[random.Next(0, legalMoves.Count - 1)];           
         }
     }
     // AI with perfect strategy
