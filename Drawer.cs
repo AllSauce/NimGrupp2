@@ -124,5 +124,10 @@ namespace NimmGrupp2
             Console.WriteLine(@"");
         }
 
+        public static void GameOver()
+        {
+            
+        }
+
     }
 }

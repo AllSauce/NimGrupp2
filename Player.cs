@@ -71,7 +71,7 @@ namespace NimmGrupp2
 
         public EasyAI()
         {
-            name = "Greggie eater of cupcakes";
+            name = "Greggie. Eater of cupcakes!";
         }
         
         //Easy AI spelningsmetod

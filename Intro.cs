@@ -12,7 +12,7 @@ namespace NimmGrupp2
             Console.WriteLine("To see the rules type 'Rules' otherwise press enter.");
             
             //Displays the rules if requested
-            if (Console.ReadLine() == "Rules")
+            if (Console.ReadLine() == "Rules" || Console.ReadLine() == "rules")
             {
                 Console.Clear();
                 Drawer.DrawLogo();
