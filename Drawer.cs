@@ -126,7 +126,7 @@ namespace NimmGrupp2
 
         public static void GameOver()
         {
-            
+            //Probably goona be used, who knows. lmao
         }
 
     }

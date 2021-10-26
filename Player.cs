@@ -71,7 +71,7 @@ namespace NimmGrupp2
 
         public EasyAI()
         {
-            name = "Greggie. Eater of cupcakes!";
+            name = "Greggie. Eater of cupcakes";
         }
         
         //Easy AI spelningsmetod
@@ -99,7 +99,7 @@ namespace NimmGrupp2
         
         public GamerModeAI()
         {
-            name = "Harambe, we still remeber";
+            name = "Harambe. Eater of bananas";
         }
         public static string Reverse(string s)
         {
