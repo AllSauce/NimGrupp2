@@ -112,8 +112,6 @@ namespace NimmGrupp2
             Console.WriteLine(@"|_| \_||_____||_|  |_|");
             Console.WriteLine();
 
-
-
         }
         public static void DrawWelcome()
         {
