@@ -12,7 +12,8 @@ namespace NimmGrupp2
             Console.WriteLine("To see the rules type 'Rules' otherwise press enter.");
             
             //Displays the rules if requested
-            if (Console.ReadLine() == "Rules")
+            string rul = Console.ReadLine();
+            if (rul == "Rules" || rul == "rules")
             {
                 Console.Clear();
                 Drawer.DrawLogo();
