@@ -123,10 +123,7 @@ namespace NimmGrupp2
             Console.WriteLine(@"    \/  \/  \___||_| \___|\___/ |_| |_| |_| \___|   \__|\___/   |_| \_||_____||_|  |_|");
             Console.WriteLine(@"");
         }
-        public static void DrawMonkey1()
-        {
-            Console.Wr
-        }
+        
 
         public static void GameOver()
         {
