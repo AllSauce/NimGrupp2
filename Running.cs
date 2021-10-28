@@ -32,7 +32,7 @@ namespace NimmGrupp2
                 }            
                 
                 bool y = true;
-                
+                //Loops until valid input is given
                 while(y)
                 {
                     try
@@ -40,6 +40,7 @@ namespace NimmGrupp2
                         t1 = player1.play(gL.GetBoard());
                         break;
                     }
+                    // Catches exceptions that are thrown due to player input error and repromts the user
                     catch(UserInputException)
                     {
                          Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, "Please enter valid input!");               
@@ -64,7 +65,7 @@ namespace NimmGrupp2
                 }                               
                
                 bool x = true;
-                
+                //Loops until valid input is given
                 while (x)
                 {
                     try 
@@ -72,12 +73,15 @@ namespace NimmGrupp2
                         t2 = player2.play(gL.GetBoard());
                         break;
                     }
+                    // Catches exceptions that are thrown due to player input error and repromts the user
                     catch( UserInputException)
                     {
                         Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, "Please enter valid input!");
                     }
-                }                
+                }
+                //Removes sticks                
                 gL.RemoveSticks(t2);
+                //Checks if game is over
                 gL.GameOver(turn1, player1, player2);
                 turn1 = true;
             }            

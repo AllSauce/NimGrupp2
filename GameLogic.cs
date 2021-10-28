@@ -14,7 +14,7 @@ using System.Collections.Generic;
         {
            return board;
         }
-        // Removes sticks from board based on index and amount
+        // Removes sticks from board based on index and amount. Can be done "blindly" without exceptionhandling since that is already done in game loop and play methods
         public void RemoveSticks(Tuple<int, int> input)
             {
                 //Chosen stack 
@@ -36,6 +36,7 @@ using System.Collections.Generic;
                 string temp = Console.ReadLine();
                 if (temp == "exit" || temp == "quit" || temp == "Exit" || temp == "Quit")
                 {
+                    //Exit message 
                     Console.Clear();
                     Console.WriteLine("");
                     Console.WriteLine("I am ever in debt to you for playing human.");
@@ -59,6 +60,7 @@ using System.Collections.Generic;
                 string temp = Console.ReadLine();
                 if (temp == "exit" || temp == "quit" || temp == "Exit" || temp == "Quit")
                 {
+                    //Exit message 
                     Console.Clear();
                     Console.WriteLine("");
                     Console.WriteLine("I am ever in debt to you for playing human.");
