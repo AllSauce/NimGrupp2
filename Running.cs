@@ -6,7 +6,8 @@ namespace NimmGrupp2
     {
         GameLogic gL;
         bool turn1 = true;
-        
+        Tuple<int, int> t1 = Tuple.Create(0, 0);
+        Tuple<int, int> t2 = Tuple.Create(0, 0);        
         // Constructor
         public Running()
         {
@@ -14,13 +15,24 @@ namespace NimmGrupp2
         }
 
         public void RunningFunc(Player player1, Player player2)
-        {                        
+        {
+                                  
             //First person's turn
             while(turn1)
-            {                
-                Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, null);
+            {
+                if (gL.GetBoard()[0] == 5 && gL.GetBoard()[1] == 5 && gL.GetBoard()[2] == 5)
+                {
+                    Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, null);
+                }
+                else
+                {
+                    //Skapar en ny int då tuple är readonly och 
+                    int tempdisplayer = t2.Item1 + 1;
+                    Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, player2.name + " took " + t2.Item2 + " from stack " + tempdisplayer);
+                }            
+                
                 bool y = true;
-                Tuple<int, int> t1 = Tuple.Create(0, 0);
+                
                 while(y)
                 {
                     try
@@ -39,10 +51,20 @@ namespace NimmGrupp2
             }            
             //Other person / AI's turn
             while (turn1 == false)
-            {                
-                Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, null);
+            {
+                
+                if (gL.GetBoard()[0] == 5 && gL.GetBoard()[1] == 5 && gL.GetBoard()[2] == 5)
+                {
+                    Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, null);
+                }
+                else
+                {
+                    int tempdisplayer = t1.Item1 + 1;
+                    Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, player1.name + " took " + t1.Item2 + " from stack " + tempdisplayer);
+                }                               
+               
                 bool x = true;
-                Tuple<int, int> t2 = Tuple.Create(0, 0);
+                
                 while (x)
                 {
                     try 

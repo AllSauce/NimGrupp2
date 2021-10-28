@@ -10,6 +10,18 @@ namespace NimmGrupp2
         public string name;
         
         public abstract Tuple<int, int> play(int[] board);
+        public static List<Tuple<int, int>> Getlegalmoves(int[] board)
+        {
+            List<Tuple<int, int>> legalMoves = new List<Tuple<int, int>>();
+            for (int i = 0; i < 3; i++)
+            {
+                for(int x = 0; x < board[i]; x++)
+                {
+                    legalMoves.Add(Tuple.Create(i, x + 1));
+                }
+            }
+            return legalMoves;
+        }
     }
 
     //Human class, for more players
@@ -47,6 +59,7 @@ namespace NimmGrupp2
                 //Converts to indexposition                
                 s1--;
                 //Looks for any Userinput errors
+                //Throws an exception that will be caught in running.cs 
                 if (!test1 || !test2)
                 {
                     throw new UserInputException();
@@ -68,57 +81,36 @@ namespace NimmGrupp2
 
     public class EasyAI : Player
     {
-
+        //Constructor
         public EasyAI()
         {
             name = "Greggie. Eater of cupcakes";
         }
         
-        //Easy AI spelningsmetod
+        //Easy AI playing method. Randomizes a move
         public override Tuple<int, int> play(int[] board)
-        {
-            
-           Random random = new Random();
-           
-           List<Tuple<int, int>> legalMoves = new List<Tuple<int, int>>();
-            for (int i = 0; i < 3; i++)
-            {
-                for(int x = 0; x < board[i]; x++)
-                {
-                    legalMoves.Add(Tuple.Create(i, x + 1));
-                }
-            }
-            return legalMoves[random.Next(0, legalMoves.Count - 1)];           
+        {            
+           Random random = new Random();           
+           List<Tuple<int, int>> legalMoves = Getlegalmoves(board);            
+           return legalMoves[random.Next(0, legalMoves.Count - 1)];           
         }
     }
-    // AI with perfect strategy
+    // AI with perfect strategy. Will win any game it starts or where opponent doesn't follow perfect strategy
     public class GamerModeAI : Player
-    {
-        //EasyAI tempEz = new EasyAI();
-        
-        
+    {        
+        //Constructor
         public GamerModeAI()
         {
             name = "Harambe. Eater of bananas";
         }
+        //Reverses a string
         public static string Reverse(string s)
         {
             char[] charArray = s.ToCharArray();
             Array.Reverse(charArray);
             return new string(charArray);
         }
-        public static List<Tuple<int, int>> Getlegalmoves(int[] board)
-        {
-            List<Tuple<int, int>> legalMoves = new List<Tuple<int, int>>();
-            for (int i = 0; i < 3; i++)
-            {
-                for(int x = 0; x < board[i]; x++)
-                {
-                    legalMoves.Add(Tuple.Create(i, x + 1));
-                }
-            }
-            return legalMoves;
-        }
+        
         private static int GetNimSum(int[] board)
         {
             //Creates new board separeate from main game board
@@ -156,6 +148,7 @@ namespace NimmGrupp2
             for(int i = 0; i < sums.Length; i++)
             {
                 var x = true;
+                //Loops in case opperation is needed multipe times
                 while (x)
                 {
                     if (sums[i] >= 2)
@@ -192,6 +185,7 @@ namespace NimmGrupp2
         }
         public override Tuple<int, int> play(int[] board)
         {
+            //Gets a list of all legal moves in current position
             List<Tuple<int, int>> legalMoves = Getlegalmoves(board); 
             //looks for a move that will result in a losing board for opponent
             foreach (Tuple<int, int> move in legalMoves)

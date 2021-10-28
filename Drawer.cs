@@ -55,15 +55,18 @@ namespace NimmGrupp2
                     DrawBar();
                     //End Block
                     Console.Write("█");
+                    //Loop for horizontal animation movement
                     for (int x = 0; x < 3; x++)
                     {
                         //Checks if space should have a stick or not
                         if (tempArray[x] > 0)
                         {
+                            //Draws a stick (duh)
                             DrawStick();
                             //Notes that stick has been drawn at stack
                             tempArray[x]--;
                         }
+                        // Draws a blank space if no stick should be drawn
                         else
                         {
                             DrawBlank();
@@ -81,7 +84,7 @@ namespace NimmGrupp2
                 else { DrawBar(); DrawSolid();  }                
             }            
         }
-        // Really these are understandable without comment        
+        // If you don't understand these methods without comment you really aren't qualified to read this code at all :)     
         private static void DrawStick()
         {
             Console.Write("  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  █");
@@ -121,7 +124,7 @@ namespace NimmGrupp2
             Console.WriteLine(@"  \ \/  \/ // _ \| | / __| / _ \ | '_ ` _ \  / _ \  | __| / _ \   | . ` |  | |  | |\/| |");
             Console.WriteLine(@"   \  /\  /|  __/| || (__ | (_) || | | | | ||  __/  | |_ | (_) |  | |\  | _| |_ | |  | |");
             Console.WriteLine(@"    \/  \/  \___||_| \___| \___/ |_| |_| |_| \___|   \__| \___/   |_| \_||_____||_|  |_|");
-            Console.WriteLine(@"");
+            Console.WriteLine();
         }
         
 
