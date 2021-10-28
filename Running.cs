@@ -28,7 +28,7 @@ namespace NimmGrupp2
                 {
                     //Skapar en ny int då tuple är readonly och 
                     int tempdisplayer = t2.Item1 + 1;
-                    Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, player2.name + " took " + t2.Item2 + " from stack " + tempdisplayer);
+                    Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, player2.name + " took " + t2.Item2 + " sticks from stack " + tempdisplayer);
                 }            
                 
                 bool y = true;
@@ -61,7 +61,7 @@ namespace NimmGrupp2
                 else
                 {
                     int tempdisplayer = t1.Item1 + 1;
-                    Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, player1.name + " took " + t1.Item2 + " from stack " + tempdisplayer);
+                    Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, player1.name + " took " + t1.Item2 + " sticks from stack " + tempdisplayer);
                 }                               
                
                 bool x = true;
