@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace NimmGrupp2
 {
@@ -125,13 +126,86 @@ namespace NimmGrupp2
         }
         public static void DrawMonkey1()
         {
-            Console.Wr
+            Console.WriteLine(@"       .---.      ");
+            Console.WriteLine(@"     _/_-.-_\_    ");
+            Console.WriteLine(@"    / __} {__ \   ");
+            Console.WriteLine(@"   / //  '  \\ \  ");
+            Console.WriteLine(@"  / / \'---'/ \ \ ");
+            Console.WriteLine(@"  \ \_/`'''`\_/ / ");
+            Console.WriteLine(@"   \           /  ");
+            
+
+        }
+        public static void DrawBonkey2()
+        {
+            Console.WriteLine(@"      .-'-.     ");
+            Console.WriteLine(@"    _/.-.-.\_   ");
+            Console.WriteLine(@"   /|( o o )|\  ");
+            Console.WriteLine(@"  | //  '  \\ | ");
+            Console.WriteLine(@" / / \'---'/ \ \");
+            Console.WriteLine(@" \ \_/`'''`\_/ /");
+            Console.WriteLine(@"  \           / ");
+            
+        }
+        
+        public static void DrawGameOver()
+        {
+            Console.WriteLine(@"  _____          __  __ ______    ______      ________ _____  ");
+            Console.WriteLine(@" / ____|   /\   |  \/  |  ____|  / __ \ \    / /  ____|  __ \ ");
+            Console.WriteLine(@"| |  __   /  \  | \  / | |__    | |  | \ \  / /| |__  | |__) |");
+            Console.WriteLine(@"| | |_ | / /\ \ | |\/| |  __|   | |  | |\ \/ / |  __| |  _  / ");
+            Console.WriteLine(@"| |__| |/ ____ \| |  | | |____  | |__| | \  /  | |____| | \ \ ");
+            Console.WriteLine(@" \_____/_/    \_\_|  |_|______|  \____/   \/   |______|_|  \_\");
+            Console.WriteLine();
         }
 
-        public static void GameOver()
+        public static void GameOver(bool aPlayer1Turn, Player player1, Player player2)
         {
-            //Probably goona be used, who knows. lmao
+            bool state1 = true;
+            while (Console.ReadKey().Key != ConsoleKey.Enter) 
+            {
+                //Probably goona be used, who knows. lmao
+                Console.Clear();
+                DrawGameOver();
+                Console.WriteLine(player1.name + " " + player1.score + " : " + player2.score + " " + player2.name);
+                Console.WriteLine();
+                if(aPlayer1Turn)
+                {
+                Console.WriteLine(player2.name +" Wins! Thanks for playing! Tap enter to play again or press esc to exit");
+                    if(player2.name == "Harambe. Eater of bananas")
+                    {
+                        if(state1){DrawMonkey1();}
+                        else{DrawBonkey2();}
+                    }
+                }
+                else
+                {
+                    Console.WriteLine(player1.name +" Wins! Thanks for playing! Tap enter to play again or press esc to exit");
+                }
+                    Console.WriteLine();
+                if (Console.ReadKey().Key != ConsoleKey.Escape)
+                {
+                    Console.Clear();
+                    Console.WriteLine("");
+                    Console.WriteLine("I am ever in debt to you for playing human.");
+                    Console.WriteLine("I thank you and I wish to play again sometime.");
+                    Console.WriteLine("So long, human...");
+                    Console.WriteLine("Till' next time!");
+                    Console.WriteLine("");
+                    Environment.Exit(0);        
+                }
+                Thread.Sleep(100);             
+
+            }
+            
+            
+
+
+            
+            
         }
+
+
 
 
     }

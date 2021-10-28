@@ -32,19 +32,8 @@ using System.Collections.Generic;
             {
                 player1.score++;
                 //Draws Winning message
-                Drawer.DrawGameUI(board, player1Turn, player1, player2, player1.name +" Wins! Thanks for playing! Tap enter to play again or type 'Exit'");
-                string temp = Console.ReadLine();
-                if (temp == "exit" || temp == "quit" || temp == "Exit" || temp == "Quit")
-                {
-                    Console.Clear();
-                    Console.WriteLine("");
-                    Console.WriteLine("I am ever in debt to you for playing human.");
-                    Console.WriteLine("I thank you and I wish to play again sometime.");
-                    Console.WriteLine("So long, human...");
-                    Console.WriteLine("Till' next time!");
-                    Console.WriteLine("");
-                    Environment.Exit(0);
-                }
+                //Drawer.DrawGameUI(board, player1Turn, player1, player2, player1.name +" Wins! Thanks for playing! Tap enter to play again or type 'Exit'");
+                Drawer.GameOver(player1Turn, player1, player2);
                 //Resets board
                 board[0] = 5;
                 board[1] = 5;
@@ -55,8 +44,9 @@ using System.Collections.Generic;
             {
                 player2.score++;
                 //Draws winning message
-                Drawer.DrawGameUI(board, player1Turn, player1, player2, player2.name +" Wins! Thanks for playing! Tap enter to play again or type 'Exit'");
+                //Drawer.DrawGameUI(board, player1Turn, player1, player2, player2.name +" Wins! Thanks for playing! Tap enter to play again or type 'Exit'");
                 string temp = Console.ReadLine();
+                Drawer.GameOver(player1Turn, player1, player2);
                 if (temp == "exit" || temp == "quit" || temp == "Exit" || temp == "Quit")
                 {
                     Console.Clear();
