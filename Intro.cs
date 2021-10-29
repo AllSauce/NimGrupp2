@@ -31,21 +31,22 @@ namespace NimmGrupp2
                 Console.ReadLine();
             }
             Console.Clear();
-            Drawer.DrawLogo();
-            Console.WriteLine("Let's play!");    
-            Console.WriteLine();        
-            Console.WriteLine("What is your name?");
-            Console.WriteLine();
-            Player player1 = new Human(Console.ReadLine());
+            
+                        
+            return Tuple.Create(Addplayer(1), Addplayer(2));
+        }
+        public Player Addplayer(int playerid)
+        {
+            
             Console.Clear();
             Drawer.DrawLogo();
-            Console.WriteLine("To play against another person type: 'Human'.");
+            Console.WriteLine("To make Player " + playerid + " a human type : 'Human'.");
             Console.WriteLine();
             Console.WriteLine("Otherwise there are 2 AI modes: 'Easy' and 'Hard'.");
             Console.WriteLine();
-            Console.WriteLine("Now please type which mode you would like to play against.");       
+            Console.WriteLine("Now please type which type you would like player " + playerid + " to be.");       
             Console.WriteLine();     
-            Player player2 = null;
+            Player player = null;
             //Loops till valid input is provided
             while (true)
             {
@@ -62,21 +63,21 @@ namespace NimmGrupp2
                     //Creates human but needs name as input
                     Console.WriteLine("Human, tell me your name!");
                     Console.WriteLine();
-                    player2 = new Human(Console.ReadLine());
+                    player = new Human(Console.ReadLine());
                     break;                    
                 }
                 else if (data == "Easy")
                 {
-                    player2 = new EasyAI();
+                    player = new EasyAI();
                     break;
                 }
                 else if (data == "Hard")
                 {
-                    player2 = new GamerModeAI();
+                    player = new GamerModeAI();
                     break;                    
                 }                            
-            }            
-            return Tuple.Create(player1, player2);
+            }
+            return player;
         }
     }
 }

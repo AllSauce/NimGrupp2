@@ -20,13 +20,14 @@ namespace NimmGrupp2
             //First person's turn
             while(turn1)
             {
+                
                 if (gL.GetBoard()[0] == 5 && gL.GetBoard()[1] == 5 && gL.GetBoard()[2] == 5)
                 {
                     Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, null);
                 }
                 else
                 {
-                    //Skapar en ny int då tuple är readonly och 
+                    //Creates an int since tuple is readonly and would display indexnumber
                     int tempdisplayer = t2.Item1 + 1;
                     Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, player2.name + " took " + t2.Item2 + " sticks from stack " + tempdisplayer);
                 }            
@@ -48,11 +49,16 @@ namespace NimmGrupp2
                 }                
                 gL.RemoveSticks(t1);
                 gL.GameOver(turn1, player1, player2);
+                if ((player1.name == "Greggie. Eater of cupcakes" || player1.name == "Harambe. Eater of bananas") && (player2.name == "Greggie. Eater of cupcakes" || player2.name == "Harambe. Eater of bananas"))
+                {
+                    Console.ReadLine();
+                }
                 turn1 = false;
             }            
             //Other person / AI's turn
             while (turn1 == false)
             {
+                
                 
                 if (gL.GetBoard()[0] == 5 && gL.GetBoard()[1] == 5 && gL.GetBoard()[2] == 5)
                 {
@@ -60,6 +66,7 @@ namespace NimmGrupp2
                 }
                 else
                 {
+                    //Creates an int since tuple is readonly and would display indexnumber
                     int tempdisplayer = t1.Item1 + 1;
                     Drawer.DrawGameUI(gL.GetBoard(), turn1, player1, player2, player1.name + " took " + t1.Item2 + " sticks from stack " + tempdisplayer);
                 }                               
@@ -83,6 +90,12 @@ namespace NimmGrupp2
                 gL.RemoveSticks(t2);
                 //Checks if game is over
                 gL.GameOver(turn1, player1, player2);
+                //Waits for user input if both players are AIs
+                
+                if ((player1.name == "Greggie. Eater of cupcakes" || player1.name == "Harambe. Eater of bananas") && (player2.name == "Greggie. Eater of cupcakes" || player2.name == "Harambe. Eater of bananas"))
+                {
+                    Console.ReadLine();
+                }
                 turn1 = true;
             }            
         }
