@@ -20,7 +20,7 @@ namespace NimmGrupp2
                 Drawer.DrawLogo();
                 Console.WriteLine("Two players take turns taking 1-5 sticks from one of the stacks on the board.");
                 Console.WriteLine();
-                Console.WriteLine("Input is provided by first stating what stack and then the amount seperated by a comma. For example: (1,3) ");
+                Console.WriteLine("Input is provided by first stating what stack and then the amount seperated by a space. For example: (1 3) ");
                 Console.WriteLine();
                 Console.WriteLine("Whoever picks the last stick wins! The board looks like this:");
                 Console.WriteLine();
@@ -46,7 +46,7 @@ namespace NimmGrupp2
             Console.WriteLine("Now please type which mode you would like to play against.");       
             Console.WriteLine();     
             Player player2 = null;
-
+            //Loops till valid input is provided
             while (true)
             {
                 string data = Console.ReadLine();
@@ -59,6 +59,7 @@ namespace NimmGrupp2
                 else if (data == "Human")
                 {                    
                     Drawer.DrawLogo();
+                    //Creates human but needs name as input
                     Console.WriteLine("Human, tell me your name!");
                     player2 = new Human(Console.ReadLine());
                     break;                    

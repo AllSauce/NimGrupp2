@@ -33,6 +33,7 @@ namespace NimmGrupp2
                 Console.WriteLine("Your turn " + player2.name + "!");
             }
             DrawBoard(board);
+            NewLine();
         }
         /// <summary>
         /// Draws A board from int[] 

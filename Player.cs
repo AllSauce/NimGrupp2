@@ -36,7 +36,7 @@ namespace NimmGrupp2
         {           
             bool x = true;
             int s1 = 0, s2 = 0;
-            char[] splitChars = new[] { ',' };
+            char[] splitChars = new[] { ' ' };
             string playerInput;
             string[] inputData;
             bool test1;
