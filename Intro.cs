@@ -61,6 +61,7 @@ namespace NimmGrupp2
                     Drawer.DrawLogo();
                     //Creates human but needs name as input
                     Console.WriteLine("Human, tell me your name!");
+                    Console.WriteLine();
                     player2 = new Human(Console.ReadLine());
                     break;                    
                 }
