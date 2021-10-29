@@ -19,6 +19,8 @@ namespace NimmGrupp2
                 Drawer.DrawLogo();
                 Console.WriteLine("Two players take turns taking 1-5 sticks from one of the stacks on the board.");
                 Console.WriteLine();
+                Console.WriteLine("Input is provided by first stating what stack and then the amount seperated by a comma. For example: (1,3) ");
+                Console.WriteLine();
                 Console.WriteLine("Whoever picks the last stick wins! The board looks like this:");
                 Console.WriteLine();
                 int[] temparray = {5, 5, 5};
