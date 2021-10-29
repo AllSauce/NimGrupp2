@@ -10,6 +10,7 @@ namespace NimmGrupp2
             Drawer.DrawWelcome();
             Console.WriteLine();
             Console.WriteLine("To see the rules type 'Rules' otherwise press enter.");
+            Console.WriteLine();
             
             //Displays the rules if requested
             string rul = Console.ReadLine();
@@ -31,14 +32,19 @@ namespace NimmGrupp2
             }
             Console.Clear();
             Drawer.DrawLogo();
-            Console.WriteLine("Let's play!");            
+            Console.WriteLine("Let's play!");    
+            Console.WriteLine();        
             Console.WriteLine("What is your name?");
+            Console.WriteLine();
             Player player1 = new Human(Console.ReadLine());
             Console.Clear();
             Drawer.DrawLogo();
             Console.WriteLine("To play against another person type: 'Human'.");
+            Console.WriteLine();
             Console.WriteLine("Otherwise there are 2 AI modes: 'Easy' and 'Hard'.");
-            Console.WriteLine("Now please type which mode you would like to play against.");            
+            Console.WriteLine();
+            Console.WriteLine("Now please type which mode you would like to play against.");       
+            Console.WriteLine();     
             Player player2 = null;
 
             while (true)
